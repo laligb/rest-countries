@@ -54,7 +54,7 @@ function CountryList() {
         {filteredCountries.map((country) => (
           <div className="card col-lg-3 col-md-5 col-sm-8 mb-5 mt-5">
             <img src={country.flag} className="flag" />
-            <h1>{country.name}</h1>
+            <h2>{country.name}</h2>
             <p>Population: {country.population}</p>
             <p>Region: {country.region}</p>
             <p>Capital: {country.capital}</p>

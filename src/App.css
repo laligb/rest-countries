@@ -1,11 +1,7 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
+.App {
+  background-color: hsl(0, 0%, 98%);
 }
 
 .header {
@@ -22,6 +18,11 @@ body {
   font-size: 20px;
 }
 
+h1,
+h2 {
+  font-weight: bold;
+}
+
 .flag {
   height: 200px;
 }
@@ -30,7 +31,6 @@ body {
 }
 
 .container {
-  background-color: hsl(0, 0%, 98%);
 }
 
 .dropdown-filter {
@@ -39,6 +39,12 @@ body {
 
 .searchbar {
   padding: 10px;
+}
+
+.card {
+  background-color: white;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .filters,

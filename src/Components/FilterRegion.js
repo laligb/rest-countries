@@ -5,7 +5,7 @@ import "react-dropdown/style.css";
 import React from "react";
 
 function FilterRegion({ countries }) {
-  const options = countries.map((country) => country.name);
+  const options = countries.map((country) => country.region);
   console.log(options);
 
   console.log("Countries?", countries);
