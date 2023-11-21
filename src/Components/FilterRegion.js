@@ -10,8 +10,9 @@ function FilterRegion({ countries }) {
 
   console.log("Countries?", countries);
   const defaultOption = options[0];
+
   return (
-    <div>
+    <div className="dropdown-filter">
       {
         <Dropdown
           options={options}

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import FilterRegion from "./FilterRegion";
+import SearchBar from "./SearchBar";
 
 function CountryList() {
   const [countries, setCountries] = useState([]);
   const [error, setError] = useState(null);
+  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,13 +32,19 @@ function CountryList() {
     return <div>Error: {error.message}</div>;
   }
 
+  // Filtering by searchbar
+  const filteredCountries = countries.filter((country) =>
+    country.name.toLowerCase().includes(searchInput.toLowerCase())
+  );
+
   return (
     <div className="container">
       CountryList
+      <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
       <FilterRegion countries={countries} />
-      <div className="row d-flex justify-content-space-between">
-        {countries.map((country) => (
-          <div className="card col-lg-3 col-md-6 col-sm-8 mb-5">
+      <div className="row ">
+        {filteredCountries.map((country) => (
+          <div className="card col-lg-3 col-md-5 col-sm-8 mb-5 mt-5">
             <img src={country.flag} className="flag" />
             <h1>{country.name}</h1>
             <p>Population: {country.population}</p>
