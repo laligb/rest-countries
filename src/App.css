@@ -45,6 +45,8 @@ h2 {
   background-color: white;
   border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 300px;
+  padding: 0;
 }
 
 .filters,
@@ -58,7 +60,6 @@ h2 {
 /* Desktop */
 @media screen and (min-width: 1440px) {
   .card {
-    width: 300px;
     margin-right: 20px;
     margin-top: 20px;
   }
@@ -67,7 +68,6 @@ h2 {
 /* Mobile */
 @media screen and (max-width: 1439px) {
   .card {
-    max-width: 70%;
     margin: 0 auto;
   }
 
