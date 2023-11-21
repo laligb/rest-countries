@@ -39,9 +39,17 @@ function CountryList() {
 
   return (
     <div className="container">
-      CountryList
-      <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
-      <FilterRegion countries={countries} />
+      <div className="row d-flex justify-content-between">
+        <div className="col-lg-4 col-md-4 col-sm-8">
+          <SearchBar
+            searchInput={searchInput}
+            setSearchInput={setSearchInput}
+          />
+        </div>
+        <div className="col-lg-3 col-md-3 col-sm-8">
+          <FilterRegion countries={countries} />
+        </div>
+      </div>
       <div className="row ">
         {filteredCountries.map((country) => (
           <div className="card col-lg-3 col-md-5 col-sm-8 mb-5 mt-5">

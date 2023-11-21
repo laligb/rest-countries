@@ -17,9 +17,10 @@ function SearchBar({ searchInput, setSearchInput }) {
     <div>
       <input
         type="text"
-        placeholder="Search here"
+        placeholder="Search for a country..."
         onChange={handleChange}
         value={searchInput}
+        className="filters searchbar"
       />
     </div>
   );

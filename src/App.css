@@ -6,7 +6,20 @@
 }
 
 body {
-  background-color: hsl(0, 0%, 98%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-bottom: 1px;
+}
+
+.header h1 {
+  font-size: 20px;
 }
 
 .flag {
@@ -17,12 +30,26 @@ body {
 }
 
 .container {
+  background-color: hsl(0, 0%, 98%);
 }
 
 .dropdown-filter {
   max-width: 200px;
 }
 
+.searchbar {
+  padding: 10px;
+}
+
+.filters,
+.Dropdown-control {
+  border-radius: 7px !important;
+  background-color: white;
+  border: none !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+/* Desktop */
 @media screen and (min-width: 1440px) {
   .card {
     width: 300px;
@@ -31,8 +58,18 @@ body {
   }
 }
 
+/* Mobile */
 @media screen and (max-width: 1439px) {
   .card {
-    margin: auto;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .filters {
+    margin: 10px 0;
+  }
+
+  .searchbar {
+    width: 100%;
   }
 }

@@ -12,12 +12,13 @@ function FilterRegion({ countries }) {
   const defaultOption = options[0];
 
   return (
-    <div className="dropdown-filter">
+    <div className="filters dropdown-filter">
       {
         <Dropdown
           options={options}
-          value={defaultOption}
-          placeholder="Select an option"
+          //value={defaultOption}
+          placeholder="Filter by Region"
+          className=""
         />
       }
     </div>
