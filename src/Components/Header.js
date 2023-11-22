@@ -1,10 +1,12 @@
 import React from "react";
 
-export default function Header() {
+export default function Header({ onThemeChange }) {
   return (
     <div className="header">
       <h1>Where is the world?</h1>
-      <div className="moon">☽ Dark Mode</div>
+      <button className="modes" onClick={onThemeChange}>
+        ☽ Dark Mode
+      </button>
     </div>
   );
 }

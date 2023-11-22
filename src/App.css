@@ -1,7 +1,49 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 .App {
+}
+
+.App .dark {
+  background-color: hsl(207, 26%, 17%);
+  color: white;
+}
+
+.App .dark .card {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+
+.App .dark .header {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+
+.App .dark button {
+  color: white;
+  background-color: transparent;
+}
+
+.App .dark .searchbar {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+
+.App .dark .Dropdown-control {
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+}
+
+button {
+  border: none;
+}
+
+.App .light {
   background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+}
+
+.App .light button {
+  background-color: white;
 }
 
 .header {
@@ -24,6 +66,11 @@ h2 {
 }
 
 h2 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+h2 {
   padding: 10px 20px;
 }
 
@@ -32,7 +79,8 @@ p {
 }
 
 .flag {
-  height: 200px;
+  height: 175px;
+  border-radius: 5px;
 }
 
 .row {
@@ -41,6 +89,8 @@ p {
 .container {
 }
 
+.modes {
+}
 .dropdown-filter {
   max-width: 200px;
 }
@@ -56,6 +106,7 @@ p {
   width: 250px;
   padding: 0;
   padding-bottom: 20px;
+  border-radius: 5px;
 }
 
 .filters,

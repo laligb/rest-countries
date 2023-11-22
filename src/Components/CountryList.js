@@ -6,6 +6,7 @@ function CountryList() {
   const [countries, setCountries] = useState([]);
   const [error, setError] = useState(null);
   const [searchInput, setSearchInput] = useState("");
+  const [selectedRegion, setSelectedRegion] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,6 +28,8 @@ function CountryList() {
   }, []);
 
   console.log(countries);
+  // const [allcountries, setAllCountries] = useState([]);
+  // allcountries = setCountries(countries);
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -37,6 +40,13 @@ function CountryList() {
     country.name.toLowerCase().includes(searchInput.toLowerCase())
   );
 
+  //Filterind by Selected Region
+
+  if (selectedRegion) {
+    filteredCountries.filter((country) => country.region === selectedRegion);
+  }
+
+  console.log(selectedRegion);
   return (
     <div className="container">
       <div className="row d-flex justify-content-between">
@@ -47,7 +57,10 @@ function CountryList() {
           />
         </div>
         <div className="col-lg-3 col-md-3 col-sm-8">
-          <FilterRegion countries={countries} />
+          <FilterRegion
+            countries={countries}
+            setSelectedRegion={setSelectedRegion}
+          />
         </div>
       </div>
       <div className="row ">
