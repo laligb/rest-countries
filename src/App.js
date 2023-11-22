@@ -10,7 +10,6 @@ function App() {
 
   const handleThemeChange = (newTheme) => {
     setTheme(theme === "light" ? "dark" : "light");
-    console.log(theme);
   };
 
   return (
