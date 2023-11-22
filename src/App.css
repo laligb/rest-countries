@@ -23,6 +23,14 @@ h2 {
   font-weight: bold;
 }
 
+h2 {
+  padding: 10px 20px;
+}
+
+p {
+  padding: 3px 20px;
+}
+
 .flag {
   height: 200px;
 }
@@ -45,8 +53,9 @@ h2 {
   background-color: white;
   border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  width: 300px;
+  width: 250px;
   padding: 0;
+  padding-bottom: 20px;
 }
 
 .filters,
@@ -62,6 +71,15 @@ h2 {
   .card {
     margin-right: 20px;
     margin-top: 20px;
+    margin-right: 70px;
+  }
+
+  .filters {
+    margin-top: 40px;
+  }
+
+  .searchbar {
+    width: 100%;
   }
 }
 
