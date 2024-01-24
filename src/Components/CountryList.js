@@ -35,16 +35,12 @@ function CountryList() {
     return <div>Error: {error.message}</div>;
   }
 
-  // Filtering by searchbar
-  const filteredCountries = countries.filter((country) =>
-    country.name.toLowerCase().includes(searchInput.toLowerCase())
+  // Filtering by search bar and selected region
+  const filteredCountries = countries.filter(
+    (country) =>
+      country.name.toLowerCase().includes(searchInput.toLowerCase()) &&
+      (!selectedRegion || country.region === selectedRegion)
   );
-
-  //Filterind by Selected Region
-
-  if (selectedRegion) {
-    filteredCountries.filter((country) => country.region === selectedRegion);
-  }
 
   console.log(selectedRegion);
   return (
